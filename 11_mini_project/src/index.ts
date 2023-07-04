@@ -2,4 +2,8 @@ function printDouble(msg: string) {
   console.log(msg)
   console.log(msg)
 }
-printDouble("Hello World!!! ")
+
+
+document.getElementById("btn")?.addEventListener("click", () => {
+  printDouble("Hello World!!! ")
+})
