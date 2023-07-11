@@ -9,7 +9,7 @@
  * - Dependency injection
  * - Easy access to functionality
  */
-class Logger {
+export class Logger {
   // static method is belong to class, not available in object
   // private access specifier used to make the variable private to Logger class
   private static instance: Logger
@@ -46,10 +46,3 @@ class Logger {
     console.log(`${this.red}${message}${this.reset}`)
   }
 }
-
-const log = Logger.log()
-
-log.info("Info: I am a singleton class")
-log.success("I am green")
-log.warn("I am yellow")
-log.error("I am red")

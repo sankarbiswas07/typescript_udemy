@@ -1,18 +1,15 @@
 {
   "name": "js_class_recap",
-  "version": "1.0.0",
-  "description": "",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
-  "main": "index.js",
   "scripts": {
-    "start": "lite-server",
-    "build": "tsc --build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "lite-server": "^2.6.1"
+  "devDependencies": {
+    "typescript": "^5.0.2",
+    "vite": "^4.4.0"
   }
 }

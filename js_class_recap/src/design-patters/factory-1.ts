@@ -19,7 +19,7 @@ class Cat extends Animal {
 
 // Abstract Creator: AnimalCreator is the abstract base class for all creators. 
 // It declares an abstract factory method createAnimal() that returns an Animal object.
-abstract class AnimalCreator {
+export abstract class AnimalCreator {
   abstract createAnimal(): Animal
 
   // Common business logic for all creators
@@ -30,21 +30,14 @@ abstract class AnimalCreator {
 }
 
 // Concrete Creators
-class DogCreator extends AnimalCreator {
+export class DogCreator extends AnimalCreator {
   createAnimal(): Animal {
     return new Dog();
   }
 }
 
-class CatCreator extends AnimalCreator {
+export class CatCreator extends AnimalCreator {
   createAnimal(): Animal {
     return new Cat();
   }
 }
-
-// Usage
-const dogCreator: AnimalCreator = new DogCreator();
-dogCreator.introduceAnimal();
-
-const catCreator: AnimalCreator = new CatCreator();
-catCreator.introduceAnimal();
