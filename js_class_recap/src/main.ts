@@ -1,5 +1,5 @@
 
-// ===================== SINGLETON ======================
+// ===================== 1_SINGLETON ======================
 import { Logger } from "./design-patters/1_singleton";
 const log = Logger.log()
 log.info("Info: I am a singleton class")
@@ -9,7 +9,7 @@ log.error("I am red..")
 // ======================================================
 
 
-// ===================== FACTORY -1 =====================
+// ===================== 2_FACTORY =====================
 import { AnimalCreator, DogCreator, CatCreator } from "./design-patters/2_factory";
 // Usage
 const dogCreator: AnimalCreator = new DogCreator();
@@ -19,8 +19,9 @@ const catCreator: AnimalCreator = new CatCreator();
 catCreator.introduceAnimal();
 // ======================================================
 
-// ===================== FACTORY -2 =====================
+// ===================== 3_FACTORY =====================
 import { AuthenticationFactory, AuthenticationMethod } from "./design-patters/3_factory";
+
 // Usage
 const authCreator: AuthenticationMethod = AuthenticationFactory.createMethod("two-factor");
 authCreator.authenticate();
