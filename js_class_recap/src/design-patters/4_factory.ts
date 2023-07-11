@@ -23,7 +23,7 @@ class QuickSort implements SortingAlgorithm {
   }
 }
 
-abstract class SortingAlgorithmFactory {
+export abstract class SortingAlgorithmFactory {
   abstract createSortingAlgorithm(): SortingAlgorithm
 
   // Common business logic for all creators
@@ -34,13 +34,13 @@ abstract class SortingAlgorithmFactory {
 }
 
 // Concrete Creators
-class BubbleSortFactory extends SortingAlgorithmFactory {
+export class BubbleSortFactory extends SortingAlgorithmFactory {
   createSortingAlgorithm(): SortingAlgorithm {
     return new BubbleSort();
   }
 }
 
-class QuickSortFactory extends SortingAlgorithmFactory {
+export class QuickSortFactory extends SortingAlgorithmFactory {
   createSortingAlgorithm(): SortingAlgorithm {
     return new QuickSort();
   }
