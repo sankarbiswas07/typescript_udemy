@@ -1,5 +1,4 @@
 /**
-import { abstract } from './4_factory';
  * Question: 
  * 
  * Implement a shape drawing application that supports multiple types of shapes,
