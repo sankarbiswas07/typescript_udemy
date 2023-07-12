@@ -38,3 +38,15 @@ const sortedArr2 = sortingFactory2.sortArray(arr);
 console.log(sortedArr1);
 console.log(sortedArr2);
 // ======================================================
+
+
+// ===================== 5_FACTORY =====================
+
+import { ShapeFactory } from './design-patters/5_factory';
+
+// Usage
+const shapeFactory = new ShapeFactory()
+const circleShape = shapeFactory.createShape("circle")
+circleShape.draw()
+
+// ======================================================
