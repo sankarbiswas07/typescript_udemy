@@ -50,3 +50,17 @@ const circleShape = shapeFactory.createShape("circle")
 circleShape.draw()
 
 // ======================================================
+
+import { ReportGenerator, PDFReportBuilder, HTMLReportBuilder } from "./design-patters/6_builder"
+// Usage
+const reportGenerator = new ReportGenerator();
+
+const pdfReportBuilder = new PDFReportBuilder();
+reportGenerator.setBuilder(pdfReportBuilder);
+const pdfReport = reportGenerator.constructReport();
+console.log(pdfReport); // Output: Report { sections: ['PDF Header', 'PDF Body', 'PDF Footer', 'PDF Optional Section'] }
+
+const htmlReportBuilder = new HTMLReportBuilder();
+reportGenerator.setBuilder(htmlReportBuilder);
+const htmlReport = reportGenerator.constructReport();
+console.log(htmlReport); // Output: Report { sections: ['HTML Header', 'HTML Body', 'HTML Footer', 'HTML Optional Section'] }
