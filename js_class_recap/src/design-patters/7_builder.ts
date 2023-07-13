@@ -46,3 +46,37 @@
  * 
  */
 
+enum AvailableToppings {
+  Cheese = "cheese",
+  Pepperoni = "pepperoni",
+  Mushrooms = "mushrooms",
+}
+type AvailableCrust = "thin" | "cheese" | "thick" | "stuffed"
+type AvailableSize = "small" | "medium" | "large" | "extra large"
+
+class Pizza {
+
+  private toppings: AvailableToppings[]
+  private crust: AvailableCrust | null
+  private size: AvailableSize | null
+
+  constructor() {
+    this.toppings = [];
+    this.crust = null;
+    this.size = null;
+  }
+
+  addToppings(topping: AvailableToppings): void {
+    this.toppings.push(topping)
+  }
+
+  setCrust(crust: AvailableCrust): void {
+    this.crust = crust
+  }
+  setSize(size: AvailableSize): void {
+    this.size = size
+  }
+
+  // Other methods to manipulate the pizza properties
+  // ...
+}
