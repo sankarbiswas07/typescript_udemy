@@ -46,6 +46,7 @@
  * 
  */
 
+// Types
 enum AvailableToppings {
   Cheese = "cheese",
   Pepperoni = "pepperoni",
@@ -54,6 +55,7 @@ enum AvailableToppings {
 type AvailableCrust = "thin" | "cheese" | "thick" | "stuffed"
 type AvailableSize = "small" | "medium" | "large" | "extra large"
 
+// Product: Pizza
 class Pizza {
 
   private toppings: AvailableToppings[]
@@ -79,4 +81,12 @@ class Pizza {
 
   // Other methods to manipulate the pizza properties
   // ...
+}
+
+// Builder Interface: PizzaBuilder
+interface IPizzaBuilder {
+  addToppings(toppings: AvailableToppings[]): void;
+  setCrustType(crustType: AvailableCrust): void;
+  setSize(size: AvailableSize): void;
+  getPizza(): Pizza;
 }
