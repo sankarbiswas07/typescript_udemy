@@ -90,3 +90,35 @@ interface IPizzaBuilder {
   setSize(size: AvailableSize): void;
   getPizza(): Pizza;
 }
+
+// Concrete Builder 
+class CustomPizzaBuilder implements IPizzaBuilder{
+  private pizza: Pizza
+
+  constructor(){
+    this.reset()
+  }
+  reset(){
+    this.pizza = new Pizza()
+  }
+  addToppings(toppings: AvailableToppings[]){
+    toppings.map((topping: AvailableToppings) => {
+      this.pizza.addToppings(topping)
+    })
+  };
+  setCrustType(crust: AvailableCrust){
+    this.pizza.setCrust(crust)
+  };
+  setSize(size: AvailableSize){
+    this.pizza.setSize(size)
+  };
+  getPizza(){
+    return this.pizza
+  };
+}
+
+class PizzaOrderDirector{
+
+  const 
+
+}
